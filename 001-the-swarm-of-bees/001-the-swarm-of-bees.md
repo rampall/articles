@@ -192,7 +192,7 @@ Spin up the cluster using specific blockchain image
 ```
 fdp-play start --detach --blockchain-image fairdatasociety/fdp-play-blockchain
 ```
-## Alright, what's next?
+# Alright, what's next?
 
 With the three methods we've explored, you can start experimenting and building with Swarm. 
 
