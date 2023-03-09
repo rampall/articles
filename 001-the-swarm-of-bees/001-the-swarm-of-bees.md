@@ -1,8 +1,6 @@
-# Building on Swarm: 3 Risk-Free Ways to Run a Bee Node — for Testing and Development
+# Building on Swarm: How to Run a Bee Node for Testing and Development
 
-Running a Bee node is essential for building decentralized applications on the Swarm network. However, as a developer, it is often convenient to work in an environment where interactions with the node/network can be tested rapidly and without putting the node’s storage data or the user’s tokens at risk.
-
-# Let’s get started
+Running a Bee node is essential for building decentralized applications on the Swarm network. However, as a developer, it is often convenient to work in an environment where interactions with the node/network can be tested rapidly and without putting the node’s storage data or the user’s tokens at risk. 
 
 In this article, we'll explore 3 safe and risk-free options available for developers to run a Bee node on Swarm primarily for testing and development:
 
@@ -14,7 +12,7 @@ Whether you're a beginner or an experienced developer, these options will help y
 
 ## Option 1: Run Bee in Developer Mode
 
-Starting a Bee node in developer mode results in an instance with volatile persistence and all back-ends mocked. Using the usual HTTP endpoints, it's possible to buy postage stamps and upload files to the Swarm network, which will be saved in memory. This mode is particularly useful for experimenting with different Bee node features and capabilities, without affecting real-world data or assets. 
+When a Bee node is started in developer mode, it creates an instance with volatile persistence and all back-ends mocked. This mode is highly advantageous for testing and experimenting with various Bee node features and capabilities, as any changes made are temporary and discarded when the node is stopped. As a result, there is no impact on real-world data or assets, making this mode an ideal option for developers looking to experiment with the Bee node.
 
 ### Prerequisites
 
@@ -22,7 +20,7 @@ Starting a Bee node in developer mode results in an instance with volatile persi
 
 ### Step 1: Install `bee` on your system
 
-You can install the [latest bee version](https://github.com/ethersphere/bee/releases/latest) on your system by:
+You can install the [latest bee version](https://github.com/ethersphere/bee/releases/latest) on your system:
 
 1. Using [Installer packages](https://docs.ethswarm.org/docs/installation/install)
     * Ubuntu/Debian (*.deb)
@@ -82,16 +80,13 @@ npm install -g @ethersphere/bee-factory
 
 ### Step 2: Using Bee Factory
 
-Spin up the cluster for specific Bee version and attached to the Queen bee node logs (Press Ctrl+C to stop)
-
+Spin up the cluster for a specific Bee version and attached to the Queen bee node logs (Press Ctrl+C to stop)
 
 ```
 bee-factory start 1.11.1
 ```
 
-
 Or spin up the cluster for a specific Bee version, detach and exit
-
 
 ```
 bee-factory start --detach 1.11.1
@@ -127,8 +122,10 @@ To list help content for a specific subcommand
 ```
 bee-factory <subcommand> --help
 ```
+:::info
+You can check out [https://github.com/ethersphere/bee-factory](https://github.com/ethersphere/bee-factory) for more information on `bee-factory`.
+:::
 
-Check out the [official project repository](https://github.com/ethersphere/bee-factory) for more information on bee-factory. 
 
 ## Option 3: Run a local network with FDP Play
 
@@ -192,8 +189,12 @@ Spin up the cluster using specific blockchain image
 ```
 fdp-play start --detach --blockchain-image fairdatasociety/fdp-play-blockchain
 ```
-## Alright, what's next?
+:::info
+You can check out [https://github.com/fairDataSociety/fdp-play](https://github.com/fairDataSociety/fdp-play) for more information on `fdp-play`.
+:::
 
-With the three methods we've explored, you can start experimenting and building with Swarm. 
+# Alright, what's next?
 
-Check out the growing [list of free and open source projects](https://github.com/ethersphere/awesome-swarm) related to Swarm and its growing ecosystem. Hang out with other developers from the Swarm community through the **#develop-on-swarm** channel on [discord](https://discord.ethswarm.org/). [Apply for a grant](https://my.ethswarm.org/grants) if you have a great idea that will make an impact. Join the Swarm!
+Now that we've explored the three risk-free options to get a bee node running, it's time to start interactiong with it and building on the Swarm network. The [Bee JS](https://github.com/ethersphere/bee-js) SDK and its [documentation](https://bee-js.ethswarm.org/docs/) is a great place to get started next.
+
+Check out our growing list of [free and open-source projects](https://github.com/ethersphere/awesome-swarm) related to Swarm and its ecosystem. Join the #develop-on-swarm channel on [Discord](https://discord.ethswarm.org/) to connect with other developers in the Swarm community. If you have a great idea that can make an impact, consider [applying for a grant](https://my.ethswarm.org/grants). The Swarm is waiting for *you*!
