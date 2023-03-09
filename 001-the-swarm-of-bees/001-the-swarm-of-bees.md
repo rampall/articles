@@ -1,4 +1,4 @@
-# Building on Swarm: How to Run a Bee Node for Testing and Development
+# Build on Swarm: Running a Bee Node for Testing and Development
 
 Running a Bee node is essential for building decentralized applications on the Swarm network. However, as a developer, it is often convenient to work in an environment where interactions with the node/network can be tested rapidly and without putting the node’s storage data or the user’s tokens at risk. 
 
