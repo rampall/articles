@@ -172,12 +172,6 @@ Stop the cluster (container data persists between restarts)
 fdp-play stop
 ```
 
-Stop the cluster (container data persists between restarts)
-
-```
-fdp-play stop
-```
-
 Clear all data (fresh) and pull latest docker images
 
 ```
